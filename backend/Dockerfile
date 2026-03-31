@@ -1,13 +1,24 @@
-FROM openjdk:17
+#Estágio 1: build 
+FROM eclipse-temurin:17-jdk AS build
 
-# Define o diretório de trabalho dentro do container
+WORKDIR /build
+
+# Copia o Maven wrapper e o pom.xml primeiro
+COPY .mvn/ .mvn/
+COPY mvnw pom.xml ./
+RUN ./mvnw dependency:go-offline -q
+
+# Copia o código-fonte e compila
+COPY src/ src/
+RUN ./mvnw package -DskipTests -q
+
+# runtime 
+FROM eclipse-temurin:17-jre
+
 WORKDIR /api-erp
 
-# Expoe a porta 8080
 EXPOSE 8080
 
-# Adiciona o arquivo JAR ao container
-ADD ./target/maisPraTi-0.0.1-SNAPSHOT.jar api-erp.jar
+COPY --from=build /build/target/maisPraTi-0.0.1-SNAPSHOT.jar api-erp.jar
 
-# Comando para rodar o JAR correto
 ENTRYPOINT ["java", "-jar", "api-erp.jar"]
