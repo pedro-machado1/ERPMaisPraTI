@@ -1,4 +1,4 @@
-FROM eclipse-temurin:17-jdk AS build
+FROM eclipse-temurin:21-jdk AS build
 
 WORKDIR /build
 
@@ -10,7 +10,7 @@ RUN mvn dependency:go-offline -q
 COPY src/ src/
 RUN mvn package -DskipTests -q
 
-FROM eclipse-temurin:17-jre
+FROM eclipse-temurin:21-jre
 
 WORKDIR /api-erp
 EXPOSE 8080
