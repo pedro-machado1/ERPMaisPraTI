@@ -260,23 +260,4 @@ Este projeto está licenciado sob a licença MIT - vide arquivo [LICENSE](LICENS
 
 ---
 
-## Contribuições
-
-Contribuições são bem-vindas! Sinta-se à vontade para:
-1. Fazer um Fork do projeto
-2. Criar uma branch para sua feature (`git checkout -b feature/MinhaFeature`)
-3. Commit suas mudanças (`git commit -m 'Adiciona MinhaFeature'`)
-4. Push para a branch (`git push origin feature/MinhaFeature`)
-5. Abrir um Pull Request
-
----
-
-## Suporte
-
-Para questões, sugestões ou reportar bugs, abra uma [Issue](https://github.com/seu-usuario/ErpMaispraTIFinal/issues).
-
----
-
-**Se este projeto foi útil, não esqueça de dar uma estrela!**
-
 
