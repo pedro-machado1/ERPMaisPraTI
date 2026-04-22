@@ -8,7 +8,6 @@ import com.erp.maisPraTi.enums.PartyStatus;
 import com.erp.maisPraTi.model.User;
 import com.erp.maisPraTi.repository.UserRepository;
 import com.erp.maisPraTi.security.JwtTokenProvider;
-import com.erp.maisPraTi.security.service.UserDetailsServiceImpl;
 import com.erp.maisPraTi.service.exceptions.AuthenticationUserException;
 import com.erp.maisPraTi.service.exceptions.ResourceNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,8 +26,6 @@ public class AuthService {
     private AuthenticationManager authenticationManager;
     @Autowired
     private JwtTokenProvider jwtTokenProvider;
-    @Autowired
-    private UserDetailsServiceImpl userService;
     @Autowired
     private UserRepository userRepository;
     @Autowired
