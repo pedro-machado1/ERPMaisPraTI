@@ -18,8 +18,6 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 import org.springframework.web.cors.CorsConfiguration;
 import org.springframework.web.cors.CorsConfigurationSource;
 import org.springframework.web.cors.UrlBasedCorsConfigurationSource;
-import org.springframework.web.filter.CorsFilter;
-
 import java.util.Arrays;
 
 import static org.springframework.security.config.Customizer.withDefaults;
@@ -57,12 +55,12 @@ public class SecurityConfig{
             "/api/swagger-resources/**",
             "/api/documentation.html",
             "/api/forgot-password/**",
-            "/api/reset-password/**"
+            "/api/reset-password/**",
+            "/api/clientes/**",
     };
     private static final String[] OPERATOR_OR_ADMIN = {
             "/auth/reset-password/**",
             "/auth/validate-user/**",
-            "/api/clientes/**",
             "/api/fornecedores/**",
             "/api/produtos/**",
             "/api/vendas/**"
@@ -103,11 +101,6 @@ public class SecurityConfig{
         UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
         source.registerCorsConfiguration("/**", corsConfig);
         return source;
-    }
-
-    @Bean
-    public CorsFilter corsFilter() {
-        return new CorsFilter(corsConfigurationSource());
     }
 
 }
