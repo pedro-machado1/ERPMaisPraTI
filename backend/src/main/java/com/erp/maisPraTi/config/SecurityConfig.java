@@ -55,10 +55,10 @@ public class SecurityConfig{
             "/api/swagger-resources/**",
             "/api/documentation.html",
             "/api/forgot-password/**",
-            "/api/reset-password/**",
-            "/api/clientes/**",
+            "/api/reset-password/**"
     };
     private static final String[] OPERATOR_OR_ADMIN = {
+            "/api/clientes/**",
             "/auth/reset-password/**",
             "/auth/validate-user/**",
             "/api/fornecedores/**",

@@ -248,6 +248,17 @@ https://erp-maispra-ti-final.vercel.app/
 
 ---
 
+### Credenciais de Acesso (Demo)
+ 
+> Use as credenciais abaixo para explorar o sistema sem precisar criar uma conta:
+ 
+| Campo | Valor |
+|-------|-------|
+| **E-mail** | `demo@erp.com` |
+| **Senha** | `Demo@123` |
+ 
+---
+
 ## Autor
 
 Desenvolvido como projeto final do **Curso Maisprati**
